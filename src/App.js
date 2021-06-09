@@ -5,7 +5,7 @@ function App() {
 
     return (
         <div className="container">
-            <Header title={7}/>
+            <Header title="Header"/>
             <h1>Hello From React</h1>
             <h2>Hello {name}</h2>
         </div>
