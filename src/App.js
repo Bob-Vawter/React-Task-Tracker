@@ -2,26 +2,26 @@ import { useState } from 'react'
 import Header from './components/Header'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
+import Footer from './components/Footer'
 
 function App() {
-    const name = 'Bob'
     const [showAddTask, setShowAddTask] = useState(false)
     const [tasks, setTasks] = useState([
         {
             id: 1,
-            text: 'Doctors Appointment',
-            day: 'July 9 at 2:30pm',
+            text: 'This was built using React',
+            day: 'June 15',
             reminder: true
         },
         {
             id: 2,
-            text: 'Hair cut',
-            day: 'June 18 at 1:30pm',
+            text: 'Have fun with this',
+            day: 'June 15',
             reminder: true
         },
         {
             id: 3,
-            text: 'Groceries',
+            text: 'Follow me below',
             day: 'June 10 at 8:00am',
             reminder: false,
         }
@@ -51,8 +51,8 @@ function App() {
         <div className="container">
             <Header onAdd={()=>setShowAddTask(!showAddTask)} showAdd={showAddTask} title="Task Tracker"/>
             {showAddTask && <AddTask onAdd={addTask} />}
-            <h2>Hello {name}</h2>
             {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>:'No Tasks'}
+            <Footer />
         </div>
     );
 }
