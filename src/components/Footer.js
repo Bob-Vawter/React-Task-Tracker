@@ -1,10 +1,17 @@
+import { FaLinkedin } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
+import { FaTwitter } from 'react-icons/fa'
+import { FaEnvelope} from 'react-icons/fa'
+
 const Footer = () => {
     return (
         <div className='footer'>
-
-        <h2>Footer Baby</h2>
-            <ul class="icons">
-                <li><a href="https://www.linkedin.com/in/vawterbob/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            <a href='https://bobvawter.netlify.app/'>Portfolio</a>
+            <ul className="icons">
+                <li><a href="https://www.linkedin.com/in/vawterbob/"><FaLinkedin /></a></li>
+                <li><a href="https://github.com/Bob-Vawter"><FaGithub /></a></li>
+                <li><a href="https://twitter.com/BobVawterDev"><FaTwitter /></a></li>
+                <li><a href="mailto: bobvawter@msn.com"><FaEnvelope /></a></li>
             </ul>
 
         </div>
@@ -13,6 +20,3 @@ const Footer = () => {
 
 export default Footer
 
-// <li><a href="https://github.com/Bob-Vawter" class="icon brands fa-github"><span class="label">Github</span></a></li>
-// <li><a href="https://twitter.com/BobVawterDev" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-// <li><a href="mailto: bobvawter@msn.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>

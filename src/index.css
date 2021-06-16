@@ -113,60 +113,26 @@ body {
   text-align: center;
 }
 
-	/* Icon */
-
-  .icon {
-    text-decoration: none;
-    border-bottom: none;
-    position: relative;
-  }
-
-  .icon:before {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
-    text-transform: none !important;
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 400;
-  }
-
-  .icon > .label {
-    display: none;
-  }
-
-  .icon:before {
-    line-height: inherit;
-  }
-
-  .icon.solid:before {
-    font-weight: 900;
-  }
-
-  .icon.brands:before {
-    font-family: 'Font Awesome 5 Brands';
-  }
-
   		/* Icons */
 
-      ul.icons {
-        cursor: default;
+      a {
+        color: rgb(0, 50, 126);
+        text-decoration:none;
+
+      }
+      a:hover{
+       color:rgb(153, 2, 27);
+      }
+
+      ul.icons li a{
         list-style: none;
         padding-left: 0;
+        font-size: 30px;
       }
+
   
       ul.icons li {
         display: inline-block;
         padding: 0 1em 0 0;
       }
   
-      ul.icons li:last-child {
-        padding-right: 0 !important;
-      }
-  
-      ul.icons li .icon:before {
-        font-size: 1.5em;
-      }
