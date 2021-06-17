@@ -4,11 +4,11 @@ import { FaTwitter } from 'react-icons/fa'
 import { FaEnvelope } from 'react-icons/fa'
 import Button from './Button'
 
-const Footer = (onClear, onDefault) => {
+const Footer = ( {onClear,onDefault} ) => {
     return (
         <div className='footer'>
-            <div className='footer-btn'>
-                <Button
+             <div className='footer-btn'>
+                 <Button
                     color='red'
                     text='Clear'
                     onClick={onClear} />

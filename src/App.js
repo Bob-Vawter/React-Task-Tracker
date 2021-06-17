@@ -9,21 +9,21 @@ function App() {
     const [tasks, setTasks] = useState([
         {
             id: 1,
-            text: 'This was built using React',
-            day: 'June 15',
+            text: 'Dentist Appointment',
+            day: 'Monday 3pm',
             reminder: true
         },
         {
             id: 2,
-            text: 'Have fun with this',
-            day: 'June 15',
+            text: 'Bocci Ball',
+            day: 'Thursday 5pm',
             reminder: true
         },
         {
             id: 3,
-            text: 'Follow me below',
-            day: 'June 10 at 8:00am',
-            reminder: false,
+            text: 'Beach Trip',
+            day: 'Saturday at 8:00am',
+            reminder: true,
         }
     ])
 
@@ -41,8 +41,37 @@ function App() {
         setTasks(tasks.filter((task) => task.id !== id))
     }
 
+    const clearTask = () => {
+        console.log('Clear Pushed')
+        setTasks(tasks.filter((task) => false))
+    }
+
+
+    //Quick way to add some default tasks to list
+    const defaultTask = () => {
+        console.log('Default Button')
+        setTasks([{
+            id:1,
+            text: 'This was built using React',
+            day: 'JS, CSS, HTML',
+            reminder: true
+        },
+        {
+            id: 2,
+            text: 'Full Stack Developer',
+            day: 'Have a great day',
+            reminder: true
+        },
+        {
+            id: 3,
+            text: 'Follow me below',
+            day: 'Portfolio, LinkedIn, Twitter, Github',
+            reminder: true,
+        }])
+    }
+
     const toggleReminder = (id) => {
-        console.log('toggle', id)
+        // console.log('toggle', id)
         setTasks(tasks.map((task) => task.id === id
             ? { ...task, reminder: !task.reminder } : task))
     }
@@ -54,7 +83,7 @@ function App() {
                 {showAddTask && <AddTask onAdd={addTask} />}
                 {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : 'No Tasks'}
             </div>
-            <Footer />
+            <Footer onClear={clearTask} onDefault={defaultTask} />
         </div>
     );
 }
